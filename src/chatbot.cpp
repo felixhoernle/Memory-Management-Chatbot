@@ -44,6 +44,62 @@ ChatBot::~ChatBot()
 
 //// STUDENT CODE
 ////
+ChatBot::ChatBot(const ChatBot &source) // copy constructor
+{
+    std::cout << "ChatBot Copy Constructor" << std::endl;
+
+    // Shallow copies of not-owned data handles
+    _currentNode = source._currentNode;
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+
+    // Deep copy of owned data handle
+    _image = new wxBitmap();
+    *_image = *source._image;
+    
+    // Update ChatbotHandle of ChatLogic
+    _chatLogic->SetChatbotHandle(this);
+}       
+
+ChatBot &ChatBot::operator=(const ChatBot &source) // copy assignment operator
+{
+    std::cout << "ChatBot Copy Assignment Operator" << std::endl;
+
+    // Check if objects are identical
+    if (this == &source)
+        return *this;
+
+    // Deallocate heap memory to avoid memory leak
+    if(_image != NULL) // Attention: wxWidgets used NULL and not nullptr
+    {
+        delete _image;
+    }
+
+    // Deep copy of owned data handle
+    _image = new wxBitmap();
+    *_image = *source._image;
+
+    // Shallow copies of not-owned data handles
+    _currentNode = source._currentNode;
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+
+    // Update ChatbotHandle of ChatLogic
+    _chatLogic->SetChatbotHandle(this);
+
+    return *this;
+
+}
+
+ChatBot::ChatBot(ChatBot &&source) // move constructor
+{
+    std::cout << "ChatBot Move Constructor" << std::endl;
+}
+
+ChatBot &ChatBot::operator=(ChatBot &&source) // move assignment operator
+{
+    std::cout << "ChatBot Move Assignment Operator" << std::endl;
+}
 
 ////
 //// EOF STUDENT CODE

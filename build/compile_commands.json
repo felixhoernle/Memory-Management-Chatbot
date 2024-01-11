@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/build",
+  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -isystem /usr/local/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /usr/local/include/wx-3.2 -g -std=gnu++17 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -o CMakeFiles/membot.dir/src/chatbot.cpp.o -c /Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/src/chatbot.cpp",
+  "file": "/Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/src/chatbot.cpp",
+  "output": "CMakeFiles/membot.dir/src/chatbot.cpp.o"
+},
+{
+  "directory": "/Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/build",
+  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -isystem /usr/local/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /usr/local/include/wx-3.2 -g -std=gnu++17 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -o CMakeFiles/membot.dir/src/chatgui.cpp.o -c /Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/src/chatgui.cpp",
+  "file": "/Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/src/chatgui.cpp",
+  "output": "CMakeFiles/membot.dir/src/chatgui.cpp.o"
+},
+{
+  "directory": "/Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/build",
+  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -isystem /usr/local/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /usr/local/include/wx-3.2 -g -std=gnu++17 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -o CMakeFiles/membot.dir/src/chatlogic.cpp.o -c /Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/src/chatlogic.cpp",
+  "file": "/Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/src/chatlogic.cpp",
+  "output": "CMakeFiles/membot.dir/src/chatlogic.cpp.o"
+},
+{
+  "directory": "/Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/build",
+  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -isystem /usr/local/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /usr/local/include/wx-3.2 -g -std=gnu++17 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -o CMakeFiles/membot.dir/src/graphedge.cpp.o -c /Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/src/graphedge.cpp",
+  "file": "/Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/src/graphedge.cpp",
+  "output": "CMakeFiles/membot.dir/src/graphedge.cpp.o"
+},
+{
+  "directory": "/Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/build",
+  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -isystem /usr/local/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /usr/local/include/wx-3.2 -g -std=gnu++17 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -o CMakeFiles/membot.dir/src/graphnode.cpp.o -c /Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/src/graphnode.cpp",
+  "file": "/Users/felixhoernle/Documents/Coding/projects/udacity-cpp-nanodegree/CppND-Memory-Management-Chatbot/src/graphnode.cpp",
+  "output": "CMakeFiles/membot.dir/src/graphnode.cpp.o"
+}
+]
