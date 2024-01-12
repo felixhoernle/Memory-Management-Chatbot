@@ -65,24 +65,24 @@ ChatBot &ChatBot::operator=(const ChatBot &source) // copy assignment operator
 {
     std::cout << "ChatBot Copy Assignment Operator" << std::endl;
 
-    // Check if objects are identical
+    // Check if objects are identical to avoid self-assignment
     if (this == &source)
         return *this;
 
-    // Deallocate heap memory to avoid memory leak
+    // Deallocate heap memory of object that gets overwritten to avoid memory leak
     if(_image != NULL) // Attention: wxWidgets used NULL and not nullptr
     {
         delete _image;
     }
 
-    // Deep copy of owned data handle
-    _image = new wxBitmap();
-    *_image = *source._image;
-
     // Shallow copies of not-owned data handles
     _currentNode = source._currentNode;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
+
+    // Deep copy of owned data handle
+    _image = new wxBitmap();
+    *_image = *source._image;
 
     // Update ChatbotHandle of ChatLogic
     _chatLogic->SetChatbotHandle(this);
@@ -94,11 +94,53 @@ ChatBot &ChatBot::operator=(const ChatBot &source) // copy assignment operator
 ChatBot::ChatBot(ChatBot &&source) // move constructor
 {
     std::cout << "ChatBot Move Constructor" << std::endl;
+
+    // (Shallow) Copy data handles
+    _currentNode = source._currentNode;
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+    _image = source._image;
+
+    // Invalidate old data handles (to achieve same effect as with a deep copy, i.e. exclusive ownership)
+    source._currentNode = nullptr;
+    source._chatLogic = nullptr;
+    source._rootNode = nullptr;
+    source._image = nullptr;
+
+    // Update ChatbotHandle of ChatLogic
+    _chatLogic->SetChatbotHandle(this);
 }
 
 ChatBot &ChatBot::operator=(ChatBot &&source) // move assignment operator
 {
     std::cout << "ChatBot Move Assignment Operator" << std::endl;
+
+    // Check if objects are identical to avoid self-assignment
+    if (this == &source)
+        return *this;
+
+    // Deallocate heap memory of object that gets overwritten to avoid memory leak
+    if(_image != NULL) // Attention: wxWidgets used NULL and not nullptr
+    {
+        delete _image;
+    }
+
+    // (Shallow) Copy data handles
+    _currentNode = source._currentNode;
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+    _image = source._image;
+
+    // Invalidate old data handles (to achieve same effect as with a deep copy, i.e. exclusive ownership)
+    source._currentNode = nullptr;
+    source._chatLogic = nullptr;
+    source._rootNode = nullptr;
+    source._image = nullptr;
+
+    // Update ChatbotHandle of ChatLogic
+    _chatLogic->SetChatbotHandle(this);
+
+    return *this;
 }
 
 ////
